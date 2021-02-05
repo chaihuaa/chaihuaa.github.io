@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 <meta name="description" content="搭建独立博客GitHub Pages与Hexo的教程1.需要安装node.js, git,2.需要有github的户头 3.配置SSH keysSSH安全通信用于本地git项目与远程的github建立联系 a)生成新的SSH key：（往下的命令都是在git cmd 命令窗口，除非特别说明）$ ssh-keygen -t rsa -C “youremailaddr”然后一路按回车这会在用户主目录生">
 <meta property="og:type" content="article">
@@ -266,7 +266,7 @@
 <p>a)生成新的SSH key：（往下的命令都是在git cmd 命令窗口，除非特别说明）<br>$ ssh-keygen -t rsa -C “youremailaddr”<br>然后一路按回车<br>这会在用户主目录生成一对文件.\ssh\id_rsa 和 id_rsa.pub</p>
 <p>b)本地设置SSH Key之后，需要在GitHub网站上个人帐号的setting中，添加一个新key<br>    登录GitHub，点击右上角的 Settings–&gt;SSH &amp; Public keys–&gt; add keys<br>    打开本地~.ssh\id_rsa.pub文件把你本地生成的钥匙文本全部复制到里面，然后点击add key</p>
 <p>c)检验fingerprint，与网站的sha256一致（可选）<br>$ ssh-keygen -E sha256 -lf id_rsa.pub</p>
-<p>4.设置用户信息<br>Git会根据用户的名字和邮箱来记录提交，所以需要设置下个人信息<br>$ git config –global user.name “xxxx”//用户名<br>$ git config –global user.email  “<a href="mailto:&#x78;&#x78;&#120;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#x78;&#x78;&#120;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>“//填写自己的邮箱</p>
+<p>4.设置用户信息<br>Git会根据用户的名字和邮箱来记录提交，所以需要设置下个人信息<br>$ git config –global user.name “xxxx”//用户名<br>$ git config –global user.email  “<a href="mailto:&#x78;&#x78;&#x78;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#x78;&#x78;&#x78;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a>“//填写自己的邮箱</p>
 <p>5.用hexo制作博客<br>安装hexo（<a target="_blank" rel="noopener" href="https://hexo.io/docs/">可参考最新官网</a>）<br>$ npm install -g hexo<br>建立一个工作文件夹来放hexo生成的项目文件，然后在文件夹中输入<br>hexo init<br>hexo 命令<br>n：新博客页 g：转换生成 s：启动预览服务器 d：发布到github</p>
 <p>删除相应的md文件就可以删除博客页</p>
 <p>6.博客内容修饰和markdown<br><a target="_blank" rel="noopener" href="https://www.appinn.com/markdown/">Markdown 语法说明(简体中文版)</a></p>
@@ -348,7 +348,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">chaihuaa</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
@@ -356,7 +356,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 
