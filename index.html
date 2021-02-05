@@ -225,10 +225,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-02-04 00:11:31 / Modified: 23:06:28" itemprop="dateCreated datePublished" datetime="2021-02-04T00:11:31-06:00">2021-02-04</time>
+      <time title="Created: 2021-02-04 00:11:31" itemprop="dateCreated datePublished" datetime="2021-02-04T00:11:31-06:00">2021-02-04</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 00:04:23" itemprop="dateModified" datetime="2021-02-05T00:04:23-06:00">2021-02-05</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -260,10 +266,10 @@
 <blockquote>
 <p>npm install theme-next/hexo-next-utteranc</p>
 </blockquote>
-<p>激活靠改\node_modules\hexo-theme-next_config.yml的utterances部分，只需要改两行：<br>    &gt;enable: true<br>    &gt;repo: chaihuaa/blogcomment  #Warehouse name, format: your user ID/warehouse name<br>  nexT会自动在页面尾部位置加入comment部分.</p>
+<p>激活靠改\node_modules\hexo-theme-next_config.yml的utterances部分，只需要改两行：<br>    &gt;enable: true<br>    &gt;repo: chaihuaa/blogcomment  #Warehouse name, format: your-user-ID/warehouse-name<br>  nexT会自动在页面尾部位置加入comment部分.</p>
 <p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hydai-hexo-next-utteranc">https://www.npmjs.com/package/hydai-hexo-next-utteranc</a><br>You can config those in both hexo or theme _config.yml</p>
 <p>issue：<br><a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a></p>
-<p>这是hexo与第三方plugin互动的问题。加上github的app，比较复杂。<br>_config.yml:  _config.next.yml  or in \node_modules\hexo-theme-next<br>swig<br>js<br>hexo<br>muse</p>
+<p>这是hexo与第三方plugin互动的问题。加上github的app，比较复杂。<br>_config.yml:  _config.next.yml  or in \node_modules\hexo-theme-next<br>swig js hexo muse</p>
 <ol start="3">
 <li><p>更新模块Install the latest version throuth npm:</p>
 <blockquote>
@@ -274,16 +280,18 @@
 </li>
 </ol>
 <p>刷新一下 GitHub Page 的设置页。现在你可以访问<a target="_blank" rel="noopener" href="http://xxx.com了./">http://xxx.com了。</a><br>稍等片刻，大概10分钟左右，再次刷新一下<br>GitHub Page 的设置页。<br>在GitHub Pages-Enforce HTTPS里打上勾。添加小锁完成</p>
-<ol start="6">
+<ol start="5">
 <li>信息<br><a target="_blank" rel="noopener" href="https://github.com/apps/utterances">https://github.com/apps/utterances</a><br>目前issue的名称似乎只支持pathname，当路径为中文时，此种方式会产生乱码。不知道按照GITALK的方式进行配置是否有效。</li>
 </ol>
 <p>Plugins extend and expand the functionality of NexT. There are two types of plugins: core plugins and third-party plugins. The core plugins are required by the basic functions of NexT. Third-party plugins provide a large number of optional features.</p>
 <p>Configuring these plugins is very easy. For example, if you want to enable <code>pjax</code> on your site, just set <code>pjax</code> to <code>true</code> in NexT config file:</p>
-<ol start="7">
-<li>域名：<br>1域名服务器：其中CNAME的value就填写你的github page的值（xxx.github.io），A的value可以通过ping xxx.github.io得到。<br>2接下来，去到你的github page的settings界面，在Options-&gt;Github pages-&gt;custom domain添加你的域名：<br>3最后一步，在你本地 /source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），里面添加你的域名即可。</li>
+<ol start="6">
+<li>域名：<br>1域名服务器：其中CNAME的host设为www，value就填写你的github page的值（xxx.github.io），<br>A的host设为@， value可以通过ping xxx.github.io得到。<br>2接下来，去到你的github page repo的settings界面（不是account 的setting），在Github pages小节的custom domain添加你的域名：<br>3最后一步，在你本地 /source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），里面添加你的域名即可。</li>
 </ol>
-<h1 id="Documentation-https-theme-next-js-org"><a href="#Documentation-https-theme-next-js-org" class="headerlink" title="Documentation: https://theme-next.js.org"></a>Documentation: <a target="_blank" rel="noopener" href="https://theme-next.js.org/">https://theme-next.js.org</a></h1><p>hexo -version 结果<br>NexT version 8.2.1<br>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>node: 14.15.4</p>
-<p>如果要评论，在sign in for comment以后，如果见到 example.com 的内容，请在浏览器地址栏中把example.com换成chaihuaa.github.io即可评论。正在协调解决中。</p>
+<ol start="7">
+<li>版本信息<h1 id="Documentation-https-theme-next-js-org"><a href="#Documentation-https-theme-next-js-org" class="headerlink" title="Documentation: https://theme-next.js.org"></a>Documentation: <a target="_blank" rel="noopener" href="https://theme-next.js.org/">https://theme-next.js.org</a></h1>hexo -version 结果<br>NexT version 8.2.1<br>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>node: 14.15.4</li>
+</ol>
+<p>如果要评论，在sign in for comment以后，如果见到 example.com 的内容，请在浏览器地址栏中把example.com换成chaih.com即可评论。正在协调解决中。</p>
 
       
     </div>
