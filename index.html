@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="烹小鲜，做实事">
@@ -233,7 +233,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-05 00:04:23" itemprop="dateModified" datetime="2021-02-05T00:04:23-06:00">2021-02-05</time>
+        <time title="Modified: 2021-02-05 15:34:37" itemprop="dateModified" datetime="2021-02-05T15:34:37-06:00">2021-02-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -260,16 +260,17 @@
 </ol>
 <p>换theme后，最好hexo clean 清理cache first.<br>以调试方式运行。Hexo local server with debug parameter (by adding –debug)：<br>    hexo s –debug </p>
 <ol start="2">
-<li>安装Utterances：用readme指导更新：<br>一定要在github先建立一个新的repo<br>repository: chaihuaa/blogcomment </li>
+<li>安装Utterances：用readme指导更新：<br>一定要在github先建立一个新的repo:<br>repository: your_github_name/new_comment_repo_name </li>
 </ol>
 <p>然后在github的setting中安装配置application： utterances<br>然后在本地目录安装</p>
 <blockquote>
 <p>npm install theme-next/hexo-next-utteranc</p>
 </blockquote>
-<p>激活靠改\node_modules\hexo-theme-next_config.yml的utterances部分，只需要改两行：<br>    &gt;enable: true<br>    &gt;repo: chaihuaa/blogcomment  #Warehouse name, format: your-user-ID/warehouse-name<br>  nexT会自动在页面尾部位置加入comment部分.</p>
+<p>激活靠改\node_modules\hexo-theme-next_config.yml的utterances部分，只需要改两行：<br>    &gt;enable: true<br>    &gt;repo: your_github_name/new_comment_repo_name  #Warehouse name, format: your-user-ID/warehouse-name<br>  nexT会自动在页面尾部位置加入comment部分. 完毕。</p>
 <p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hydai-hexo-next-utteranc">https://www.npmjs.com/package/hydai-hexo-next-utteranc</a><br>You can config those in both hexo or theme _config.yml</p>
 <p>issue：<br><a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a></p>
-<p>这是hexo与第三方plugin互动的问题。加上github的app，比较复杂。<br>_config.yml:  _config.next.yml  or in \node_modules\hexo-theme-next<br>swig js hexo muse</p>
+<p>这是hexo与第三方plugin互动的问题。加上github的app，比较复杂。<br>_config.yml:  _config.next.yml  or in \node_modules\hexo-theme-next<br>swig js hexo </p>
+<p>配置nexT的scheme：  修改\node_modules\hexo-theme-next_config.yml </p>
 <ol start="3">
 <li><p>更新模块Install the latest version throuth npm:</p>
 <blockquote>
@@ -286,12 +287,12 @@
 <p>Plugins extend and expand the functionality of NexT. There are two types of plugins: core plugins and third-party plugins. The core plugins are required by the basic functions of NexT. Third-party plugins provide a large number of optional features.</p>
 <p>Configuring these plugins is very easy. For example, if you want to enable <code>pjax</code> on your site, just set <code>pjax</code> to <code>true</code> in NexT config file:</p>
 <ol start="6">
-<li>域名：<br>1域名服务器：其中CNAME的host设为www，value就填写你的github page的值（xxx.github.io），<br>A的host设为@， value可以通过ping xxx.github.io得到。<br>2接下来，去到你的github page repo的settings界面（不是account 的setting），在Github pages小节的custom domain添加你的域名：<br>3最后一步，在你本地 /source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），里面添加你的域名即可。</li>
+<li>custom域名：<br>1域名服务器：其中CNAME的host设为www，value就填写你的github page的值（xxx.github.io），<br>A的host设为@， value可以通过ping xxx.github.io得到。<br>2接下来，去到你的github page repo的settings界面（不是account 的setting），在Github pages小节的custom domain添加你的域名：<br>3最后一步，在你本地 /source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），里面添加你的域名即可。</li>
 </ol>
 <ol start="7">
 <li>版本信息<h1 id="Documentation-https-theme-next-js-org"><a href="#Documentation-https-theme-next-js-org" class="headerlink" title="Documentation: https://theme-next.js.org"></a>Documentation: <a target="_blank" rel="noopener" href="https://theme-next.js.org/">https://theme-next.js.org</a></h1>hexo -version 结果<br>NexT version 8.2.1<br>hexo: 5.3.0<br>hexo-cli: 4.2.0<br>node: 14.15.4</li>
 </ol>
-<p>如果要评论，在sign in for comment以后，如果见到 example.com 的内容，请在浏览器地址栏中把example.com换成chaih.com即可评论。正在协调解决中。</p>
+<p>如果要评论，在sign in for comment以后，如果见到 example.com 的内容，请在浏览器地址栏中把域名example.com换成chaih.com，保留域名以后的地址字串，即可评论。正在协调解决中。</p>
 
       
     </div>
@@ -543,7 +544,7 @@
       </span>
     </span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
     </div>
@@ -551,7 +552,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
 
